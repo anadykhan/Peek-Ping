@@ -1,3 +1,4 @@
+import GlassyButton from "./components/GlassyButton"
 import Heading from "./components/Heading"
 import MaxWidthWrapper from "./components/MaxWidthWrapper"
 import {Check} from "lucide-react"
@@ -42,6 +43,12 @@ const page = () => {
                 )
               })}
             </ul>
+
+            <div className="w-full max-w-80">
+              <GlassyButton href="/sign-up" className="relative z-10 h-14 w-full text-base shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                Stat For Free Today!
+              </GlassyButton>
+            </div>
           </div>
         </MaxWidthWrapper>
       </section>
