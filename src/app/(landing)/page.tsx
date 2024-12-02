@@ -1,7 +1,7 @@
-import GlassyButton from "./components/GlassyButton"
-import Heading from "./components/Heading"
-import MaxWidthWrapper from "./components/MaxWidthWrapper"
-import {Check} from "lucide-react"
+import GlassyButton from "../../components/GlassyButton"
+import Heading from "../../components/Heading"
+import MaxWidthWrapper from "../../components/MaxWidthWrapper"
+import { Check } from "lucide-react"
 
 const page = () => {
   return (
@@ -37,7 +37,7 @@ const page = () => {
                     key={index}
                     className="flex gap-1.5 items-center text-left"
                   >
-                    <Check className="size-5 shrink-0 text-brand-700"/>
+                    <Check className="size-5 shrink-0 text-brand-700" />
                     {item}
                   </li>
                 )
@@ -45,7 +45,10 @@ const page = () => {
             </ul>
 
             <div className="w-full max-w-80">
-              <GlassyButton href="/sign-up" className="relative z-10 h-14 w-full text-base shadow-lg transition-shadow duration-300 hover:shadow-xl">
+              <GlassyButton
+                href="/sign-up"
+                className="relative z-10 h-14 w-full text-base shadow-lg transition-shadow duration-300 hover:shadow-xl"
+              >
                 Stat For Free Today!
               </GlassyButton>
             </div>
