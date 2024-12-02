@@ -3,6 +3,8 @@ import GlassyButton from "../../components/GlassyButton"
 import Heading from "../../components/Heading"
 import MaxWidthWrapper from "../../components/MaxWidthWrapper"
 import { Check } from "lucide-react"
+import { AnimatedList } from "@/components/ui/animated-list"
+import DiscordMessage from "@/components/DiscordMessage"
 
 const page = () => {
   return (
@@ -61,7 +63,50 @@ const page = () => {
         <div className="relative mx-auto">
           <MaxWidthWrapper>
             <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-              <MockDiscordUi></MockDiscordUi>
+              <MockDiscordUi>
+                <AnimatedList>
+                  <DiscordMessage
+                    avatarSrc="/brand-asset-profile-picture.png"
+                    avatarAlt="Peek Ping Avatar"
+                    username="PeekPing"
+                    timeStamp="Today at 12:33PM"
+                    badgeText="Sign Up"
+                    badgeColor="#43b581"
+                    title="👤 New user signed up"
+                    content={{
+                      name: "Hello Kitty",
+                      email: "hello.kitty@gmail.com",
+                    }}
+                  ></DiscordMessage>
+                  <DiscordMessage
+                    avatarSrc="/brand-asset-profile-picture.png"
+                    avatarAlt="Peek Ping Avatar"
+                    username="PeekPing"
+                    timeStamp="Today at 12:33PM"
+                    badgeText="Revenue"
+                    badgeColor="#faa61a"
+                    title="💰 Payment Received"
+                    content={{
+                      amount: "$50.45",
+                      email: "kitty.hello@gmail.com",
+                      plan: "PRO",
+                    }}
+                  ></DiscordMessage>
+                  <DiscordMessage
+                    avatarSrc="/brand-asset-profile-picture.png"
+                    avatarAlt="Peek Ping Avatar"
+                    username="PeekPing"
+                    timeStamp="Today at 12:33PM"
+                    badgeText="Milestone"
+                    badgeColor="#5865f2"
+                    title="🚀 Revenue Milestone Achieved"
+                    content={{
+                      recurringRevenue: "$5000 USD",
+                      growth: "+8.2%",
+                    }}
+                  ></DiscordMessage>
+                </AnimatedList>
+              </MockDiscordUi>
             </div>
           </MaxWidthWrapper>
         </div>
