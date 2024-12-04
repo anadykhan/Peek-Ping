@@ -2,12 +2,13 @@ import MockDiscordUi from "@/components/MockDiscordUi"
 import GlassyButton from "../../components/GlassyButton"
 import Heading from "../../components/Heading"
 import MaxWidthWrapper from "../../components/MaxWidthWrapper"
-import { Check } from "lucide-react"
+import { Check, Star } from "lucide-react"
 import { AnimatedList } from "@/components/ui/animated-list"
 import DiscordMessage from "@/components/DiscordMessage"
 import Image from "next/image"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"
+import { Icons } from "@/components/Icons"
 
 const page = () => {
   const codeSnippet = `await fetch("http://localhost:3000/api/v1/events", {
@@ -265,7 +266,90 @@ const page = () => {
           </div>
         </MaxWidthWrapper>
       </section>
-      <section></section>
+      <section className="relative py-24 sm:py-34 bg-white">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-20">
+          <div>
+            <h2 className="text-center text-base/7 font-semibold text-brand-600">
+              Real-world-experince
+            </h2>
+            <Heading className="text-center">What our customers say</Heading>
+          </div>
+          <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
+            {/*Frist cusomter review*/}
+            <div className="flex flex-auto flex-col gap-4 bg-brand-25 p-6 sm:p-8 lg:p-6 rounded-t-[2rem] lg:rounded-tr-none lg:rounded-l-[2rem]">
+              <div className="flex gap-0.5 mb-2 justify-center lg:justify-start">
+                {[...Array(5)].map((_, index) => {
+                  return (
+                    <Star className="size-5 text-brand-600 fill-brand-600"></Star>
+                  )
+                })}
+              </div>
+              <p className="text-base sm:text-lg lg:text-lg/8 font-medium tracking-tight text-brand-950 text-center lg:text-left text-pretty">
+                Peek Ping is a game-changer for anyone who values their online
+                presence and customer satisfaction. It's a trustworthy companion
+                for monitoring uptime, offering peace of mind and empowering
+                businesses to operate at their best. Highly recommended!
+              </p>
+              <div className="flex flex-col justify-center lg:justify-start sm:flex-row items-center sm:items-start gap-4 mt-2">
+                <Image
+                  src="/user-2.png"
+                  className="rounded-full object-cover"
+                  alt="Random user"
+                  width={48}
+                  height={48}
+                ></Image>
+                <div className="flex flex-col items-center sm:items-start">
+                  <p className="font-semibold flex items-center">
+                    Freya Larason
+                    <Icons.verificationBadge className="size-4 inline-block ml-1.5"></Icons.verificationBadge>
+                  </p>
+                  <p className="text-sm text-gray-600">@itsFreya</p>
+                </div>
+              </div>
+            </div>
+
+            {/*Second cusomter review*/}
+            <div className="flex flex-auto flex-col gap-4 bg-brand-25 p-6 sm:p-8 lg:p-6 rounded-b-[2rem] lg:rounded-bl-none lg:rounded-r-[2rem]">
+              <div className="flex gap-0.5 mb-2 justify-center lg:justify-start">
+                {[...Array(5)].map((_, index) => {
+                  return (
+                    <Star className="size-5 text-brand-600 fill-brand-600"></Star>
+                  )
+                })}
+              </div>
+              <p className="text-base sm:text-lg lg:text-lg/8 font-medium tracking-tight text-brand-950 text-center lg:text-left text-pretty">
+                Peek Ping has been a game-changer for our business, providing
+                the peace of mind that comes with knowing our websites and
+                services are always being monitored.
+              </p>
+              <div className="flex flex-col justify-center lg:justify-start sm:flex-row items-center sm:items-start gap-4 mt-2">
+                <Image
+                  src="/user-1.png"
+                  className="rounded-full object-cover"
+                  alt="Random user"
+                  width={48}
+                  height={48}
+                ></Image>
+                <div className="flex flex-col items-center sm:items-start">
+                  <p className="font-semibold flex items-center">
+                    Hello Kitty
+                    <Icons.verificationBadge className="size-4 inline-block ml-1.5"></Icons.verificationBadge>
+                  </p>
+                  <p className="text-sm text-gray-600">@hkitty</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                <GlassyButton
+                href="/sign-up"
+                className="relative z-10 h-14 w-full max-w-xs text-base shadow-lg transition-shadow duration-300 hover:shadow-xl"
+                >
+                  Start For Free Today
+                </GlassyButton>
+
+        </MaxWidthWrapper>
+      </section>
       <section></section>
     </>
   )
